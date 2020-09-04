@@ -1,0 +1,23 @@
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7/babel.js"></script>
+  <script type="text/babel">
+    const root = document.getElementById('root');
+    const className = 'container';
+    const children = 'JSX with curly braces'
+    const element = <div className="{className}">{children}</div>
+
+    const element2 = <div className="{className}" children={children}></div>
+
+    const props = {className,children}
+    const element3 = <div {...props} ></div>
+
+    //element1 , element2 and element3 are all same.
+
+    const element4 = <div id="not-root" {...props} className="not-container"></div>
+
+    ReactDOM.render(element4, root);
+  </script>
+</body>
