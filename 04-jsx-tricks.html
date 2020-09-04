@@ -7,9 +7,9 @@
     const root = document.getElementById('root');
     const className = 'container';
     const children = 'JSX with curly braces'
-    const element = <div className="{className}">{children}</div>
+    const element = <div className={className}>{children}</div>
 
-    const element2 = <div className="{className}" children={children}></div>
+    const element2 = <div className={className} children={children}></div>
 
     const props = {className,children}
     const element3 = <div {...props} ></div>
