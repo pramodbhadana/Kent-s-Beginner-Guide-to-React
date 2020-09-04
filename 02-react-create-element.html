@@ -1,0 +1,35 @@
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script type="text/javascript">
+    const root = document.getElementById('root');
+    const element1 = React.createElement('div', {
+      children: ['React Child Here', 'second child'],
+      className: 'container',
+    });
+
+    const element2 = React.createElement('div', {
+      className: 'container',
+    },
+    'React Child Here',
+    'second child',
+    );
+
+    //element 1 and element 2 are functionally same
+
+
+    const element3 = React.createElement('div', {
+      children: React.createElement('span', null, 'nested child here'),
+      className: 'container'
+    })
+
+    console.log(element3);
+
+    ReactDOM.render(element3, root);
+    // const element = document.createElement('div');
+    // element.textContent = 'Hello world !!';
+    // element.className = 'container';
+    // root.appendChild(element);
+  </script>
+</body>
