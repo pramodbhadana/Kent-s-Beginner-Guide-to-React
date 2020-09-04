@@ -36,3 +36,10 @@ This repo contains my learnings from the course Beginner's Guide to React by Ken
 1. One of the main advantage of using React is the ability it provides to re use components. 
 2. Make a function with first letter capitalised and make it return a JSX element. 
 This way this function can be used just like a HTML tag while creating react elements.
+
+#### Lesson 06 : Create a Simple Reusable React Component
+
+1. As re-usable components will most likely be consumed by other people, to make sure that these are used properly, we can add validator functions on each prop type(As javascript does not have any build in type checking). One way to do that is to add a validator function on Component.proptypes property. These validator functions can also be re used by making them data-type specific.
+2. Seeing the popularity and the requirement of proptypes property, react team released prop type module on npm making it easier to add validator functions. You need to anly specify the intended type of the prop.
+3. As prop type check adds extra burden on rendering, this could be a performance bottleneck. So proptypes does not exist on the production version of react. 
+4. There are some tools which can help remove proptypes from the production codebase but most probably these are included in the bundling toolkits you are already using.

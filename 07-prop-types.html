@@ -1,0 +1,61 @@
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7/babel.js"></script>
+  <script src="https://unpkg.com/prop-types@15.6.1/prop-types.js"></script>
+  <script type="text/babel">
+    const root = document.getElementById('root');
+
+    function User({ firstName, lastName }) {
+      return (
+        <div>
+          Hello {firstName}
+          {lastName}
+        </div>
+      );
+    }
+
+    // using the proptypes property to add validator functions
+
+    // //individual validators 
+    //  User.propTypes = {
+    //   firstName(props, propName, componentName) {
+    //     if (typeof props[propName] !== 'string') {
+    //       return new Error(
+    //         `The prop ${propName} should be a string but you passed ${typeof props[
+    //           propName
+    //         ]}`
+    //       );
+    //     }
+    //   },
+    // };
+
+    // //Add validator for a data-type and re-use later.
+    // const PropTypes = {
+    //   string(props, propName, componentName) {
+    //     if (typeof props[propName] !== 'string') {
+    //       return new Error(
+    //         `The prop ${propName} should be a string but you passed ${typeof props[
+    //           propName
+    //         ]}`
+    //       );
+    //     }
+    //   },
+    // };
+
+    // User.propTypes = {
+    //   firstName: PropTypes.string,
+    //   lastName: PropTypes.string,
+    // };
+
+    //Using the package Proptypes available on npm
+
+    User.propTypes = {
+      firstName: PropTypes.string.isRequired,
+      lastName: PropTypes.string.isRequired,
+    };
+    const newUser = <User firstName={false} />;
+    ReactDOM.render(newUser, root);
+  </script>
+</body>
