@@ -1,0 +1,41 @@
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7/babel.js"></script>
+  <script type="text/babel">
+    const root = document.getElementById('root');
+    const element = (
+      <div>
+        <span> First Span </span>
+        <span> Second span </span>
+      </div>
+    );
+
+    const firstSpan = React.createElement('span',null,'First span');
+    const secondSpan = React.createElement('span',null,' Second span');
+
+    const element2 = React.createElement('React.Fragment', null, firstSpan, secondSpan);
+
+    const element3 = (
+      <React.Fragment>
+        <span> First Span </span>
+        <span> Second span </span>
+      </React.Fragment>
+    );
+
+    const element4 = (
+      <>
+        <span> First Span </span>
+        <span> Second span </span>
+      </>
+    );
+
+    //element2, element3 and element4 are all the same.
+
+    
+
+
+    ReactDOM.render(element2, root);
+  </script>
+</body>

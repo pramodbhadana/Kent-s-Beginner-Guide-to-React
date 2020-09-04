@@ -3,7 +3,7 @@ This repo contains my learnings from the course Beginner's Guide to React by Ken
 
 #### What I have learnt : 
 
-##### Lesson 1 : Create a user Interface with Vanilla Javascript and DOM    
+##### Lesson 01 : Create a user Interface with Vanilla Javascript and DOM    
 
 1. Using the DOM API to create a new element and append it as an child to an existing DOM element.
 
@@ -24,3 +24,8 @@ This repo contains my learnings from the course Beginner's Guide to React by Ken
 1. Anything inside '{}' can be a valid javascript expression in JSX. 
 2. Using the above property, multiple arguments can be appended to an object and this object can be passed to the element. 
 3. The order of the arguments passed to the element matters. The last one wins. This can be utilised in over-riding some of the parameters of an object that was previously passed as argument.
+
+#### Lesson 05 : Render two elements side-by-side with React Fragments
+
+1. React.Fragment allows us to render two elements to the root without having to contain them inside a container div.
+2. This is helpful when we need an exact structure (without any container div) for elements like a table.
