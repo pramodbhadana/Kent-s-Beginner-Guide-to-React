@@ -29,3 +29,10 @@ This repo contains my learnings from the course Beginner's Guide to React by Ken
 
 1. React.Fragment allows us to render two elements to the root without having to contain them inside a container div.
 2. This is helpful when we need an exact structure (without any container div) for elements like a table.
+
+
+#### Lesson 06 : Create a Simple Reusable React Component
+
+1. One of the main advantage of using React is the ability it provides to re use components. 
+2. Make a function with first letter capitalised and make it return a JSX element. 
+This way this function can be used just like a HTML tag while creating react elements.

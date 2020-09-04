@@ -1,0 +1,50 @@
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7/babel.js"></script>
+  <script type="text/babel">
+    const root = document.getElementById('root');
+
+    const msg = <div>Message here</div>;
+
+    const element = (
+      <div>
+        <div>Message here</div>
+        <div>Message here</div>
+      </div>
+    );
+
+    const element2 = (
+      <div>
+        {msg}
+        {msg}
+      </div>
+    );
+
+    //element 1 and element 2 are same.
+
+    //Reusable element 2
+
+    const message = (props) => <div className='message'>{props.msg}</div>;
+
+    const element3 = (
+      <div className='container'>
+        {message({ msg: 'first message' })}
+        {message({ msg: 'second message' })}
+      </div>
+    );
+
+    const Message = (props) => <div className='message'>{props.children}</div>;
+
+    const element4 = (
+      <div className='container'>
+        <Message> First Message </Message>
+        <span>Span here</span>
+        <Message> Second Message </Message>
+      </div>
+    );
+
+    ReactDOM.render(element4, root);
+  </script>
+</body>
