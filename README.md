@@ -37,9 +37,20 @@ This repo contains my learnings from the course Beginner's Guide to React by Ken
 2. Make a function with first letter capitalised and make it return a JSX element. 
 This way this function can be used just like a HTML tag while creating react elements.
 
-#### Lesson 06 : Create a Simple Reusable React Component
+#### Lesson 07 : Create a Simple Reusable React Component
 
 1. As re-usable components will most likely be consumed by other people, to make sure that these are used properly, we can add validator functions on each prop type(As javascript does not have any build in type checking). One way to do that is to add a validator function on Component.proptypes property. These validator functions can also be re used by making them data-type specific.
 2. Seeing the popularity and the requirement of proptypes property, react team released prop type module on npm making it easier to add validator functions. You need to anly specify the intended type of the prop.
 3. As prop type check adds extra burden on rendering, this could be a performance bottleneck. So proptypes does not exist on the production version of react. 
 4. There are some tools which can help remove proptypes from the production codebase but most probably these are included in the bundling toolkits you are already using.
+
+#### Lesson 08 : Understand and Use Interpolation in JSX
+
+1. HTML and Javascript already provide the concept of interpolation i.e. depending upon where in the file you are, you can use different language features or complete different language altogether. 
+e.g. One can write CSS inside the style tags of HTML files and JS inside the script tag.
+
+Inside the template literals (``), everything is interpreted as string, but inside ${__} Javascript expressions can be used.
+2. JSX also supports interpolation inside {__}.
+3. Interpolation inside curly braces supports Javascript expressions only, no conditional statements, loops or other constructs (same as template literals inside JS).
+4. One enters JSX land when inside <tags> in the Javascript and JS land again inside the curly braces.
+5. JSX tags and {} can be nested as many as times as possible. 

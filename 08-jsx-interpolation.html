@@ -1,0 +1,28 @@
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7/babel.js"></script>
+  <script type="text/babel">
+    const root = document.getElementById('root');
+
+    function UserText({ text }) {
+      return (
+        <div>
+          The text '{text}' has {' '}
+          {text.length > 0 ? <strong>{text.length}</strong> : 'No'}
+          {' '}characters
+        </div>
+      );
+    }
+
+    const element = (
+      <>
+        <UserText text='Hey there !!' />
+        <UserText text='' />
+      </>
+    );
+
+    ReactDOM.render(element, root);
+  </script>
+</body>
