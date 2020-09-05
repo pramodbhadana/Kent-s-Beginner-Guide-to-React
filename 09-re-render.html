@@ -1,0 +1,39 @@
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7/babel.js"></script>
+  <script type="text/babel">
+    const rootElement = document.getElementById('root');
+
+
+    //Updates the whole DOM tree (down from root element)
+    function tick1() {
+      const time = new Date().toLocaleTimeString()
+      const element = `
+        <div>
+          <input value=${time} />
+          <input value=${time} />
+        <div/>
+      `
+      rootElement.innerHTML = element;
+    }
+
+
+    //Updates just the part which has changed , in this case just the values of the 
+    //input types.
+    function tick2() {
+      const time = new Date().toLocaleTimeString()
+      const element = (
+        <>
+          <input value={time} />
+          <input value={time} />
+        </>
+      )
+      ReactDOM.render(element, rootElement)
+    }
+
+    setInterval(tick1, 1000)
+
+  </script>
+</body>

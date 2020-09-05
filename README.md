@@ -53,4 +53,10 @@ Inside the template literals (``), everything is interpreted as string, but insi
 2. JSX also supports interpolation inside {__}.
 3. Interpolation inside curly braces supports Javascript expressions only, no conditional statements, loops or other constructs (same as template literals inside JS).
 4. One enters JSX land when inside <tags> in the Javascript and JS land again inside the curly braces.
-5. JSX tags and {} can be nested as many as times as possible. 
+5. JSX tags and {} can be nested as many as times as possible.
+
+
+#### Lesson 09 : Rerender a React Application
+
+1. When DOM is updated using just JS, the whole element is replaced with a new one. (No surprises there). But when we render the same element (with some updates) using React, React does not update the whole element, insted it intelligentally calculates the the part which has changed and updates just that.
+2. There are some advantages to the approach taken by React.Because the updated element is the same element as before but just with updated values, user does not loose the interation which he/she was having with the element e.g. focus state remains.
