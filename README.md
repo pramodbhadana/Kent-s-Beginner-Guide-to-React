@@ -60,3 +60,11 @@ Inside the template literals (``), everything is interpreted as string, but insi
 
 1. When DOM is updated using just JS, the whole element is replaced with a new one. (No surprises there). But when we render the same element (with some updates) using React, React does not update the whole element, insted it intelligentally calculates the the part which has changed and updates just that.
 2. There are some advantages to the approach taken by React.Because the updated element is the same element as before but just with updated values, user does not loose the interation which he/she was having with the element e.g. focus state remains.
+
+#### Lesson 10 : Style React Components with className and inline Styles
+
+1. A big advantage of using React is that it supports components, so whenever we encounter a part of UI which is used at more than one place, its better to make a react component out of it.
+2. While writing defination of a component, make sure that the user can still override all the configuration of the compoenent if they want to. (Spread the user provided props after the default ones)
+3. Instead of using the CSS class names like box-small, try to use more abstract concept like a size prop (with possible values as small, medium). This way the details of the implementation can be put entirely into the component code and away from the developer using the component.
+4. The reason the word 'className' is used instead of 'class' is because the 'class' is reserved and would create problem when used in regular javascript code.
+5. CSS properties are passed to the prop style in the form of an object in camelCase. CamelCase to make them consistent with standard DOM 'sytle' Javascript property. 
