@@ -68,3 +68,9 @@ Inside the template literals (``), everything is interpreted as string, but insi
 3. Instead of using the CSS class names like box-small, try to use more abstract concept like a size prop (with possible values as small, medium). This way the details of the implementation can be put entirely into the component code and away from the developer using the component.
 4. The reason the word 'className' is used instead of 'class' is because the 'class' is reserved and would create problem when used in regular javascript code.
 5. CSS properties are passed to the prop style in the form of an object in camelCase. CamelCase to make them consistent with standard DOM 'sytle' Javascript property. 
+
+
+#### Lesson 11 : Use Event Handlers with React
+
+1. One good thing about how react handles the event handlers is that the handler is added at the element itself, it makes it readable and easy to follow along.
+2. React wraps the original DOM event inside a SyntheticEvent Object to do some serious optimization. This object is almost equal to the DOM event. 
