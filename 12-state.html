@@ -1,0 +1,41 @@
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7/babel.js"></script>
+  <style></style>
+  <script type="text/babel">
+    const rootElement = document.getElementById('root');
+
+    function GreetingsForm() {
+
+      // uncool way of doing things
+      // const state = React.useState('');
+      // const name = state[0];
+      // const setName = state[1];
+
+      //cooler way
+      const [name, setName] = React.useState('');
+      const handleNameChange = (event) => setName(event.target.value);
+
+      const [name2, setName2] = React.useState('');
+      const handleNameChange2 = (event) => setName2(event.target.value);
+      return (
+        <div>
+          <form>
+            <label htmlFor='name'>Name :</label>
+            <input id='name' onChange={handleNameChange} />
+          </form>
+          {name ? <strong> Hello {name} </strong> : 'Please enter your name'}
+          <form>
+            <label htmlFor='name2'>Name2 :</label>
+            <input id='name2' onChange={handleNameChange2} />
+          </form>
+          {name2 ? <strong> Hello {name2} </strong> : 'Please enter your name'}
+        </div>
+      );
+    }
+
+    ReactDOM.render(<GreetingsForm />, rootElement);
+  </script>
+</body>

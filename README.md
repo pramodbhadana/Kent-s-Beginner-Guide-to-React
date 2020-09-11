@@ -72,3 +72,9 @@ e.g. One can write CSS inside the style tags of HTML files and JS inside the scr
 
 1. One good thing about how react handles the event handlers is that the handler is added at the element itself, it makes it readable and easy to follow along.
 2. React wraps the original DOM event inside a SyntheticEvent Object to do some serious optimization. This object is almost equal to the DOM event. 
+
+#### Lesson 12 : Manage state in a React Component with the useState hook
+
+1. If we maintain state of a compenent inside the component defination, we loose the state once the garbage collector runs. Its hard to do state management on our own using just the concept of objects holding references to older states. 
+1. React Hooks allows us to hook or connect a state with a component and whenever the user does something, we update the state and then react updates the compenent as a 'reaction'.
+2. The 'useState' API provides ability to maintain independent states inside the same components. 
