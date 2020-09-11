@@ -79,7 +79,12 @@ e.g. One can write CSS inside the style tags of HTML files and JS inside the scr
 1. React Hooks allows us to hook or connect a state with a component and whenever the user does something, we update the state and then react updates the compenent as a 'reaction'.
 2. The 'useState' API provides ability to maintain independent states inside the same components. 
 
-#### Lesson 12 : Manage side-effects in a React Component with the useEffect hook
+#### Lesson 13 : Manage side-effects in a React Component with the useEffect hook
 
 1. The react hook API 'useEffect' allows us to get a callback when a components state is updated.
 2. This kind of API helps us in managing the side-effect of user's interactions.
+
+#### Lesson 14 : Use a lazy initializer with useState
+
+1. Doing a heavy operation on component re-render could be problematic and not the best way to utilize the resources. We can save computational resources e.g in the case where we are parsing a JSON when the first page load.
+2. To combat this problem, we can pass a function to useState hook and react would run this to fetch the initial value only.
