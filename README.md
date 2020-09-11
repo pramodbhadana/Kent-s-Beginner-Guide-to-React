@@ -88,3 +88,9 @@ e.g. One can write CSS inside the style tags of HTML files and JS inside the scr
 
 1. Doing a heavy operation on component re-render could be problematic and not the best way to utilize the resources. We can save computational resources e.g in the case where we are parsing a JSON when the first page load.
 2. To combat this problem, we can pass a function to useState hook and react would run this to fetch the initial value only.
+
+#### Lesson 15 : Manage the useEffect dependency array
+
+1. The useEffect hook tries to eagerly synchronize the state of the world with the state of the application. This means that the effect callback is called every time a component is rendered and sometimes that is more than what we need.
+2. In case we do not want a effect callback to run, just provide a dependency array to useEffect API. Include only those state variables, on whose state change you want to listen to.
+3. While providing the dependency array, make sure that you provide all the state variables which are being used in the effect callback.
