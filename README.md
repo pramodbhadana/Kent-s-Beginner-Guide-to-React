@@ -78,3 +78,8 @@ e.g. One can write CSS inside the style tags of HTML files and JS inside the scr
 1. If we maintain state of a compenent inside the component defination, we loose the state once the garbage collector runs. Its hard to do state management on our own using just the concept of objects holding references to older states. 
 1. React Hooks allows us to hook or connect a state with a component and whenever the user does something, we update the state and then react updates the compenent as a 'reaction'.
 2. The 'useState' API provides ability to maintain independent states inside the same components. 
+
+#### Lesson 12 : Manage side-effects in a React Component with the useEffect hook
+
+1. The react hook API 'useEffect' allows us to get a callback when a components state is updated.
+2. This kind of API helps us in managing the side-effect of user's interactions.
