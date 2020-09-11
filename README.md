@@ -47,9 +47,7 @@ This way this function can be used just like a HTML tag while creating react ele
 #### Lesson 08 : Understand and Use Interpolation in JSX
 
 1. HTML and Javascript already provide the concept of interpolation i.e. depending upon where in the file you are, you can use different language features or complete different language altogether. 
-e.g. One can write CSS inside the style tags of HTML files and JS inside the script tag.
-
-Inside the template literals (``), everything is interpreted as string, but inside ${__} Javascript expressions can be used.
+e.g. One can write CSS inside the style tags of HTML files and JS inside the script tag. Inside the template literals (``), everything is interpreted as string, but inside ${__} Javascript expressions can be used.
 2. JSX also supports interpolation inside {__}.
 3. Interpolation inside curly braces supports Javascript expressions only, no conditional statements, loops or other constructs (same as template literals inside JS).
 4. One enters JSX land when inside <tags> in the Javascript and JS land again inside the curly braces.
