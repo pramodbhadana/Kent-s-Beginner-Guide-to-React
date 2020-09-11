@@ -16,7 +16,7 @@
       React.useEffect(() => {
         console.log('use effect greetingsForm');
         window.localStorage.setItem('name', name);
-      });
+      }, [name]);
       return (
         <div>
           <form>
