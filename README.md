@@ -94,3 +94,9 @@ e.g. One can write CSS inside the style tags of HTML files and JS inside the scr
 1. The useEffect hook tries to eagerly synchronize the state of the world with the state of the application. This means that the effect callback is called every time a component is rendered and sometimes that is more than what we need.
 2. In case we do not want a effect callback to run, just provide a dependency array to useEffect API. Include only those state variables, on whose state change you want to listen to.
 3. While providing the dependency array, make sure that you provide all the state variables which are being used in the effect callback.
+
+#### Lesson 16 : Create reusable custom hooks
+
+1. As the central theme around React is reuse (and programming in general), we can write our own custom hook elements. 
+2. Its a convention to use the word 'use' before out custom hook. This also makes it eligible to be linted by the ESLint rules and thus avoiding some bugs.
+
