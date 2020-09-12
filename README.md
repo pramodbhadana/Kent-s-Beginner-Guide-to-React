@@ -100,3 +100,9 @@ e.g. One can write CSS inside the style tags of HTML files and JS inside the scr
 1. As the central theme around React is reuse (and programming in general), we can write our own custom hook elements. 
 2. Its a convention to use the word 'use' before out custom hook. This also makes it eligible to be linted by the ESLint rules and thus avoiding some bugs.
 
+#### Lesson 17 : Manipulate the DOM with React refs
+
+1. React is really good at figuring out when to re-render and what to re-render without us worrying about the DOM elements. But sometimes we need access to the DOM element e.g. in case of third party libraries which were not created for react specifically.
+2. React.useRef() API allows us to get access to DOM node. Get an object 'refObj' from React.useRef(), pass 'refObj' object to ref prop on the component, then in the effect function, this refObj.current will return the current DOM element of the component.
+
+
