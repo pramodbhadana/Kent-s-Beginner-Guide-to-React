@@ -1,0 +1,45 @@
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+  <script type="text/babel">
+    
+    function Form() {
+      const inputRef = React.useRef();
+      function handleInput(event) {
+        event.preventDefault();
+
+        //Approach 1, DO NOT USE
+        //Makes our form component kind of useless, as it may not work 
+        //when there is another input element on the page.
+        //const name = document.querySelector('input').value;
+
+        //Approach 2 & 3 DO NOT USE
+        //It is dependent on the order of elements in the component. 
+        //Breaks if we add another inout tag
+        //const name = event.target[0].value;
+        //const name = event.target.elements[0].value;
+
+        //Approach 4 CAN BE USED
+        // Access the input element directly using the id or name attribute
+        //const name = event.target.elements.nameInput.value;
+
+        //Approach 5, using a React.ref
+        const name = inputRef.current.value;
+
+
+        alert(`Hello ${name}`);
+      }
+      return (
+        <form onSubmit={handleInput}>
+          <label htmlFor='nameInput'>Name : </label>
+          <input ref={inputRef} id='nameInput' type='text'/>
+          <br/>
+          <button type='submit'>Submit</button>
+        </form>
+      );
+    }
+    ReactDOM.render(<Form />, document.getElementById('root'))
+  </script>
+</body>

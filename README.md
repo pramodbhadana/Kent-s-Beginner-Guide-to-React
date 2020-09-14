@@ -113,3 +113,11 @@ e.g. One can write CSS inside the style tags of HTML files and JS inside the scr
 3. If a particular state change leads to the re-render, then only the useEffect cleanup functions related to that state are triggered (and then the useEffect functions are triggered shortly after that).
 4. UseState callback is only used to fetch intial value of the state at the first render of the component. (Lazy Initializer)
 5. React decides when a component will be rendered. So, even if we define some React element, its render function will be trigerred when React decides that its time to add this element to the UI. In case of child elements, render completes for the parent first and then the child element's render is done.
+
+
+#### Lesson 19 : Make Basic Forms with React
+
+1. There are multiple ways to extract user entered values from a form element. 
+Some methods depends on the order of the elements inside the form component we just made, avoid such ways. 
+2. Use a method which depends on the named elements('id', 'name' attribute on the input element).
+3. React refs can be used here as well. But avoid them unless there is no other good way to do so.
