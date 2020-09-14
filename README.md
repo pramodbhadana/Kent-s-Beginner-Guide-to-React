@@ -106,3 +106,10 @@ e.g. One can write CSS inside the style tags of HTML files and JS inside the scr
 2. React.useRef() API allows us to get access to DOM node. Get an object 'refObj' from React.useRef(), pass 'refObj' object to ref prop on the component, then in the effect function, this refObj.current will return the current DOM element of the component.
 
 
+#### Lesson 18 : Understand the React Hook Flow
+
+1. All the eligible useEffect functions are always called in the order of their declaration. In the initial render, all the useEffect callbacks are called.(And all the useEffect cleanup functions when component is removed.)
+2. If no dependancy array is provided, then this use Effect callback is triggered after all the renders. Whereas with an empty dependency array, no such thing happens.
+3. If a particular state change leads to the re-render, then only the useEffect cleanup functions related to that state are triggered (and then the useEffect functions are triggered shortly after that).
+4. UseState callback is only used to fetch intial value of the state at the first render of the component. (Lazy Initializer)
+5. React decides when a component will be rendered. So, even if we define some React element, its render function will be trigerred when React decides that its time to add this element to the UI. In case of child elements, render completes for the parent first and then the child element's render is done.
