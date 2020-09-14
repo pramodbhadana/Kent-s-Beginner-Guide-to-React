@@ -133,3 +133,10 @@ Some methods depends on the order of the elements inside the form component we j
 1. To stop user from even entering wrong kind of inout, we can make use of value prop and provide the input state directly on the element. 
 
 
+#### Lesson 22 : Using React Error Boundaries to handle errors in React Components
+
+1. In case of an unhandled error in React, the whole UI crashes. React gives a stack trace to identify what caused the problem. The concept of ErrorBoundary comes to the rescue in these cases to help catch, stop the propogation of error and help in providing meaningful error message to the user.
+2. An ErrorBoundary is essentially a class component which intercepts the error coming from its children elements and then render something else in that case.
+3. Again using the component driven structure of React, we can make a custom fallback component. Using different fallback components with a single general ErrorBoundary, we can render different Fallback UIs at diffrent situations.
+4. React-error-boundary is a npm package that already ships a pretty robust ErrorBoundary component, we just have to provide a fallback component.
+5. The position of an ErrorBoundary component makes a real impact. Recommended approach is to have different fallback components at different positions to report useful information to the user.
