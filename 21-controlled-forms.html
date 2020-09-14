@@ -1,0 +1,30 @@
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+  <script type="text/babel">
+    
+    function Form() {
+      const [name, setName] = React.useState('');
+      function handleInput(event) {
+        event.preventDefault();
+        alert(`Hello ${name}`);
+      }
+
+      function handleChange(event) {
+        setName(event.target.value.toLowerCase());        
+      }
+
+      return (
+        <form onSubmit={handleInput}>
+          <label htmlFor='nameInput'>Name : </label>
+          <input id='nameInput' type='text' onChange={handleChange} value={name}/>
+          <br/>
+          <button type='submit'>Submit</button>
+        </form>
+      );
+    }
+    ReactDOM.render(<Form />, document.getElementById('root'))
+  </script>
+</body>

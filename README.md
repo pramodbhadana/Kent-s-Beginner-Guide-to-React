@@ -126,3 +126,10 @@ Some methods depends on the order of the elements inside the form component we j
 #### Lesson 20 : Make Dynamic Forms with React
 
 1. To make dynamic forms that respond to user input in the form of showing special output based on certain input, change a state variable based on user input and then use this variable to render UI element.
+
+
+#### Lesson 21 : Controlling Form Values with React
+
+1. To stop user from even entering wrong kind of inout, we can make use of value prop and provide the input state directly on the element. 
+
+
