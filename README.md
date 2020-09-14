@@ -121,3 +121,8 @@ e.g. One can write CSS inside the style tags of HTML files and JS inside the scr
 Some methods depends on the order of the elements inside the form component we just made, avoid such ways. 
 2. Use a method which depends on the named elements('id', 'name' attribute on the input element).
 3. React refs can be used here as well. But avoid them unless there is no other good way to do so.
+
+
+#### Lesson 20 : Make Dynamic Forms with React
+
+1. To make dynamic forms that respond to user input in the form of showing special output based on certain input, change a state variable based on user input and then use this variable to render UI element.
